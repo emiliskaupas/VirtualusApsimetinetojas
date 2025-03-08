@@ -94,7 +94,8 @@ namespace OpenAI
             {
                 Debug.LogWarning("No text was generated from this prompt.");
             }
-
+            Destroy(GameObject.Find("Sent Message(Clone)"), 1f);
+            Destroy(GameObject.Find("Received Message(Clone)"), 1f);
             button.enabled = true;
             inputField.enabled = true;
         }
