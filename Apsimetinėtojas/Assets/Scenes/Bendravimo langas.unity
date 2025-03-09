@@ -1674,6 +1674,8 @@ GameObject:
   - component: {fileID: 1483043658}
   - component: {fileID: 1483043657}
   - component: {fileID: 1483043659}
+  - component: {fileID: 1483043660}
+  - component: {fileID: 1483043661}
   m_Layer: 0
   m_Name: ChatGPT
   m_TagString: Untagged
@@ -1694,7 +1696,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 990456877}
-  button: {fileID: 1566981846}
+  button: {fileID: 658394857}
+  recordButton: {fileID: 1566981846}
+  stopRecordButton: {fileID: 48371419}
   sent: {fileID: 2076337498}
   received: {fileID: 169318417}
   received_text: {fileID: 490076891}
@@ -1723,6 +1727,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9afde3f34d0ddb247a7b0a21ec5d46c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1483043660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483043656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2929e9b5425844c4992cbe2f9db90ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1483043661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483043656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e9854d0266e9a4697d17c0563f0d3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1541318058

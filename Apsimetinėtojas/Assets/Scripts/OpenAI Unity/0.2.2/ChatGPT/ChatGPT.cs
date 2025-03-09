@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenAI;
 using TMPro;
 using static UnityEngine.Rendering.STP;
+using UnityEngine.Profiling;
 
 namespace OpenAI
 {
@@ -13,6 +14,8 @@ namespace OpenAI
     {
         [SerializeField] private TMP_InputField inputField;
         [SerializeField] private Button button;
+        [SerializeField] private Button recordButton;
+        [SerializeField] private Button stopRecordButton;
         //[SerializeField] private ScrollRect scroll;
 
         [SerializeField] private RectTransform sent;
@@ -23,6 +26,8 @@ namespace OpenAI
         private string model;
         private OpenAIApi openai;
         private string prompt;
+        private AudioRecorder recorder;
+        private WhisperAPI whisper;
 
         private List<ChatMessage> messages = new List<ChatMessage>();
         
@@ -40,6 +45,22 @@ namespace OpenAI
             prompt = ConfigLoader.config.prompt;
             Debug.Log("Using OpenAI model: " + model);
             button.onClick.AddListener(SendReply);
+            recorder = GetComponent<AudioRecorder>();
+            whisper = GetComponent<WhisperAPI>();
+            recordButton.onClick.AddListener(StartRecording);
+            stopRecordButton.onClick.AddListener(StopRecordingAndTranscribe);
+
+        }
+        public void StartRecording()
+        {
+            recorder.StartRecording();
+        }
+
+        public async void StopRecordingAndTranscribe()
+        {
+            recorder.StopRecording();
+            string transcription = await whisper.TranscribeAudio(recorder.GetFilePath());
+            received_text.text = transcription;
         }
 
         private void AppendMessage(ChatMessage message)
