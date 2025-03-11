@@ -7,6 +7,7 @@ using OpenAI;
 using TMPro;
 using static UnityEngine.Rendering.STP;
 using UnityEngine.Profiling;
+using System.Globalization;
 
 namespace OpenAI
 {
@@ -28,10 +29,16 @@ namespace OpenAI
         private string prompt;
         private AudioRecorder recorder;
         private WhisperAPI whisper;
+        private bool recorded = false;
+        private string transcription;
 
         private List<ChatMessage> messages = new List<ChatMessage>();
-        
 
+        private void Awake()
+        {
+            recorder = GetComponent<AudioRecorder>();
+            whisper = GetComponent<WhisperAPI>();
+        }
         private void Start()
         {
             if (ConfigLoader.config == null)
@@ -44,23 +51,29 @@ namespace OpenAI
             model = ConfigLoader.config.model;
             prompt = ConfigLoader.config.prompt;
             Debug.Log("Using OpenAI model: " + model);
-            button.onClick.AddListener(SendReply);
-            recorder = GetComponent<AudioRecorder>();
-            whisper = GetComponent<WhisperAPI>();
             recordButton.onClick.AddListener(StartRecording);
             stopRecordButton.onClick.AddListener(StopRecordingAndTranscribe);
+            button.onClick.AddListener(SendReply);
+
+
 
         }
+        /// <summary>
+        /// Begins recording of AudioRecorder
+        /// </summary>
         public void StartRecording()
         {
             recorder.StartRecording();
+            recorded = true;
         }
-
+        /// <summary>
+        /// Stops recording and transcribes the recorded text
+        /// transcription- string of the transcribed text
+        /// </summary>
         public async void StopRecordingAndTranscribe()
         {
             recorder.StopRecording();
-            string transcription = await whisper.TranscribeAudio(recorder.GetFilePath());
-            received_text.text = transcription;
+            transcription = await whisper.TranscribeAudio(recorder.GetFilePath());
         }
 
         private void AppendMessage(ChatMessage message)
@@ -78,11 +91,28 @@ namespace OpenAI
 
         private async void SendReply()
         {
-            var newMessage = new ChatMessage()
+            ChatMessage newMessage;
+            if (!recorded)
+            {
+                newMessage = new ChatMessage()
             {
                 Role = "user",
                 Content = inputField.text
             };
+                Debug.Log($"NOT RECORDED {inputField.text}");
+            }
+            else
+            {
+                await Task.Delay(4000); ///delay because transcription takes a long time (it's all running in parallel. Why? idek man)
+                newMessage = new ChatMessage()
+                {
+                    Role = "user",
+                    Content = transcription
+                };
+                Debug.Log($"RECORDED {transcription}");
+            recorded = false;
+            }
+            Debug.Log($"NewMessageContent: {newMessage.Content}");
 
             AppendMessage(newMessage);
 
