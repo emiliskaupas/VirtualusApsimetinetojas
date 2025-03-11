@@ -8,6 +8,8 @@ using TMPro;
 using static UnityEngine.Rendering.STP;
 using UnityEngine.Profiling;
 using System.Globalization;
+using System.Collections;
+using UnityEngine.Networking;
 
 namespace OpenAI
 {
@@ -29,7 +31,6 @@ namespace OpenAI
         private string prompt;
         private AudioRecorder recorder;
         private WhisperAPI whisper;
-        private bool recorded = false;
         private string transcription;
 
         private List<ChatMessage> messages = new List<ChatMessage>();
@@ -56,7 +57,6 @@ namespace OpenAI
             button.onClick.AddListener(SendReply);
 
 
-
         }
         /// <summary>
         /// Begins recording of AudioRecorder
@@ -64,7 +64,6 @@ namespace OpenAI
         public void StartRecording()
         {
             recorder.StartRecording();
-            recorded = true;
         }
         /// <summary>
         /// Stops recording and transcribes the recorded text
@@ -74,6 +73,7 @@ namespace OpenAI
         {
             recorder.StopRecording();
             transcription = await whisper.TranscribeAudio(recorder.GetFilePath());
+            inputField.text = transcription;
         }
 
         private void AppendMessage(ChatMessage message)
@@ -91,27 +91,11 @@ namespace OpenAI
 
         private async void SendReply()
         {
-            ChatMessage newMessage;
-            if (!recorded)
-            {
-                newMessage = new ChatMessage()
+                ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
                 Content = inputField.text
             };
-                Debug.Log($"NOT RECORDED {inputField.text}");
-            }
-            else
-            {
-                await Task.Delay(4000); ///delay because transcription takes a long time (it's all running in parallel. Why? idek man)
-                newMessage = new ChatMessage()
-                {
-                    Role = "user",
-                    Content = transcription
-                };
-                Debug.Log($"RECORDED {transcription}");
-            recorded = false;
-            }
             Debug.Log($"NewMessageContent: {newMessage.Content}");
 
             AppendMessage(newMessage);
@@ -139,6 +123,7 @@ namespace OpenAI
                 messages.Add(message);
                 AppendMessage(message);
                 received_text.text = message.Content;
+                SpeakText(message.Content);
                 Debug.Log(message.Content);
             }
             else
@@ -149,6 +134,60 @@ namespace OpenAI
             Destroy(GameObject.Find("Received Message(Clone)"), 1f);
             button.enabled = true;
             inputField.enabled = true;
+        }
+        public async void SpeakText(string text)
+        {
+            string audioFilePath = await whisper.TextToSpeech(text);
+            if (!string.IsNullOrEmpty(audioFilePath))
+            {
+                Debug.Log($"AUDIOFILEPATH: {audioFilePath}");
+                PlayAudio(audioFilePath);
+            }
+        }
+        private void PlayAudio(string filePath)
+        {
+            StartCoroutine(PlayAudioCoroutine(filePath));
+        }
+        private IEnumerator PlayAudioCoroutine(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                Debug.LogError($"File not found: {filePath}");
+                yield break;
+            }
+
+            // Convert to a valid URI format for UnityWebRequest
+            string uri = "file://" + filePath;
+            Debug.Log($"Loading audio from: {uri}");
+
+            using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(uri, AudioType.MPEG))
+            {
+                yield return www.SendWebRequest();
+
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+                {
+                    Debug.LogError($"Error loading audio: {www.error}");
+                    yield break;
+                }
+
+                AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
+                if (clip == null)
+                {
+                    Debug.LogError("Failed to load audio clip.");
+                    yield break;
+                }
+
+                AudioSource audioSource = GetComponent<AudioSource>();
+                if (audioSource == null)
+                {
+                    Debug.LogError("No AudioSource found on this GameObject.");
+                    yield break;
+                }
+
+                audioSource.clip = clip;
+                audioSource.Play();
+                Debug.Log("Playing audio...");
+            }
         }
     }
 }
