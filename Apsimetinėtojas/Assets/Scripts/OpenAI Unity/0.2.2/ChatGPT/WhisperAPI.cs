@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 public class WhisperAPI : MonoBehaviour
 {
     private static readonly string whisperUrl = "https://api.openai.com/v1/audio/transcriptions";
+    private static readonly string ttsUrl = "https://api.openai.com/v1/audio/speech";
 
     public async Task<string> TranscribeAudio(string filePath)
     {
@@ -38,13 +39,49 @@ public class WhisperAPI : MonoBehaviour
                 {
                     // Extract the "text" field from JSON response
                     JObject json = JObject.Parse(jsonResponse);
-                    Debug.Log($"Successfully transcribed! {json.ToString()}");
                     return json["text"]?.ToString();
 
                 }
                 else
                 {
                     Debug.LogError("Whisper API error: " + jsonResponse);
+                    return null;
+                }
+            }
+        }
+    }
+    public async Task <string>TextToSpeech(string prompt)
+    {
+        if(prompt == null)
+        {
+            Debug.LogError("No text for TTS found");
+            return null;
+        }
+        using(HttpClient client = new HttpClient())
+        {
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigLoader.config.api_key);
+            var requestData = new
+            {
+                model = "tts-1",
+                input = prompt,
+                voice = "nova",
+                response_format = "mp3"
+            };
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(requestData);
+            var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            string outputPath = Path.Combine(Application.persistentDataPath, "speech.mp3");
+            HttpResponseMessage response = await client.PostAsync(ttsUrl, content);
+            if (response.IsSuccessStatusCode)
+            {
+                byte[] audioData = await response.Content.ReadAsByteArrayAsync();
+                File.WriteAllBytes(outputPath, audioData);
+                Debug.Log($"Speech saved: {outputPath}");
+                return outputPath;
+            }
+            else
+            {
+                {
+                    Debug.LogError("TTS API Error: " + await response.Content.ReadAsStringAsync());
                     return null;
                 }
             }
