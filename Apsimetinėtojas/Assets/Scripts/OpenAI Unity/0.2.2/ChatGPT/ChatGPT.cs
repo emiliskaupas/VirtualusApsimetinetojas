@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using OpenAI;
 using TMPro;
 using static UnityEngine.Rendering.STP;
+using UnityEngine.Profiling;
+using System.Globalization;
+using UnityEngine.InputSystem;
 
 namespace OpenAI
 {
@@ -13,6 +16,8 @@ namespace OpenAI
     {
         [SerializeField] private TMP_InputField inputField;
         [SerializeField] private Button button;
+        [SerializeField] private Button recordButton;
+        [SerializeField] private Button stopRecordButton;
         //[SerializeField] private ScrollRect scroll;
 
         [SerializeField] private RectTransform sent;
@@ -23,10 +28,20 @@ namespace OpenAI
         private string model;
         private OpenAIApi openai;
         private string prompt;
+        private AudioRecorder recorder;
+        private WhisperAPI whisper;
+        private bool recorded = false;
+        private string transcription;
+
+        private TouchScreenKeyboard keyboard;
 
         private List<ChatMessage> messages = new List<ChatMessage>();
-        
 
+        private void Awake()
+        {
+            recorder = GetComponent<AudioRecorder>();
+            whisper = GetComponent<WhisperAPI>();
+        }
         private void Start()
         {
             if (ConfigLoader.config == null)
@@ -39,7 +54,36 @@ namespace OpenAI
             model = ConfigLoader.config.model;
             prompt = ConfigLoader.config.prompt;
             Debug.Log("Using OpenAI model: " + model);
+            recordButton.onClick.AddListener(StartRecording);
+            stopRecordButton.onClick.AddListener(StopRecordingAndTranscribe);
             button.onClick.AddListener(SendReply);
+
+
+
+        }
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SendReply();
+            }
+        }
+        /// <summary>
+        /// Begins recording of AudioRecorder
+        /// </summary>
+        public void StartRecording()
+        {
+            recorder.StartRecording();
+            recorded = true;
+        }
+        /// <summary>
+        /// Stops recording and transcribes the recorded text
+        /// transcription- string of the transcribed text
+        /// </summary>
+        public async void StopRecordingAndTranscribe()
+        {
+            recorder.StopRecording();
+            transcription = await whisper.TranscribeAudio(recorder.GetFilePath());
         }
 
         private void AppendMessage(ChatMessage message)
@@ -57,11 +101,28 @@ namespace OpenAI
 
         private async void SendReply()
         {
-            var newMessage = new ChatMessage()
+            ChatMessage newMessage;
+            if (!recorded)
+            {
+                newMessage = new ChatMessage()
             {
                 Role = "user",
                 Content = inputField.text
             };
+                Debug.Log($"NOT RECORDED {inputField.text}");
+            }
+            else
+            {
+                await Task.Delay(4000); ///delay because transcription takes a long time (it's all running in parallel. Why? idek man)
+                newMessage = new ChatMessage()
+                {
+                    Role = "user",
+                    Content = transcription
+                };
+                Debug.Log($"RECORDED {transcription}");
+            recorded = false;
+            }
+            Debug.Log($"NewMessageContent: {newMessage.Content}");
 
             AppendMessage(newMessage);
 

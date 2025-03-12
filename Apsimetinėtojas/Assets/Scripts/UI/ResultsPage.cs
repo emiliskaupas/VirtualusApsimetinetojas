@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartPage : MonoBehaviour
+public class ResultsPage : MonoBehaviour
 {
     [SerializeField] private Button StartButton;
     [SerializeField] private Button InformationButton;
@@ -22,13 +22,13 @@ public class StartPage : MonoBehaviour
         {
             SceneManager.UnloadScene("Bendravimo langas");
             //LoadScene("Pradinis langas");
-            Debug.Log("Pradinis langas loaded");
+            Debug.Log("Rezultatu langas loaded");
         }
-        if (IsSceneLoaded("results"))
+        if(IsSceneLoaded("Pradinis langas"))
         {
-            SceneManager.UnloadScene("results");
+            SceneManager.UnloadScene("Pradinis langas");
             //LoadScene("Pradinis langas");
-            Debug.Log("Pradinis langas loaded");
+            Debug.Log("Rezultatu langas loaded");
         }
         StartButton.onClick.AddListener(onStartButton);
         InformationButton.onClick.AddListener(ToggleInformation);
@@ -68,12 +68,11 @@ public class StartPage : MonoBehaviour
     [System.Obsolete]
     private void onStartButton()
     {
-        if (IsSceneLoaded("Pradinis langas"))
+        if (IsSceneLoaded("results"))
         {
-            SceneManager.UnloadScene("Pradinis langas");
+            SceneManager.UnloadScene("results");
             LoadScene("Bendravimo langas");
-            Debug.Log("Pradinis langas loaded");
+            Debug.Log("Bendravimo langas loaded");
         }
     }
-
 }
