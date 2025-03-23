@@ -18,9 +18,15 @@ public class StartPage : MonoBehaviour
     [System.Obsolete]
     void Start()
     {
-        if (IsSceneLoaded("Bendravimo langas"))
+        if (IsSceneLoaded("Bendravimo langas female"))
         {
-            SceneManager.UnloadScene("Bendravimo langas");
+            SceneManager.UnloadScene("Bendravimo langas female");
+            //LoadScene("Pradinis langas");
+            Debug.Log("Pradinis langas loaded");
+        }
+        else if (IsSceneLoaded("Bendravimo langas male"))
+        {
+            SceneManager.UnloadScene("Bendravimo langas male");
             //LoadScene("Pradinis langas");
             Debug.Log("Pradinis langas loaded");
         }
@@ -64,9 +70,12 @@ public class StartPage : MonoBehaviour
     {
         if (IsSceneLoaded("Pradinis langas"))
         {
-            SceneManager.UnloadScene("Pradinis langas");
-            LoadScene("Bendravimo langas");
-            Debug.Log("Pradinis langas loaded");
+            SceneManager.UnloadSceneAsync("Pradinis langas");
+
+            // Get the last used scene or default to "Bendravimo langas female"
+            string lastScene = PlayerPrefs.GetString("LastTalkingPage", "Bendravimo langas female");
+            LoadScene(lastScene);
+            Debug.Log($"{lastScene} loaded");
         }
     }
 

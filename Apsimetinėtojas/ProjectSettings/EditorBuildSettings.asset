@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Pradinis langas.unity
     guid: 17f3b629f94ad0c42a1a840311df5425
   - enabled: 1
-    path: Assets/Scenes/Bendravimo langas.unity
+    path: Assets/Scenes/Bendravimo langas female.unity
     guid: 47140a6989b2b4f409d716ff3fa2636b
+  - enabled: 1
+    path: Assets/Scenes/Bendravimo langas male.unity
+    guid: 57fb6edb41b9db3448d0e3ae66e2237c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a8c9985cfadb2634da8d39060b05be32, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 7ec635b788d6502428ae523d80a0c5f1, type: 2}
