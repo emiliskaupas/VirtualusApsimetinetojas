@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class TalkingPage : MonoBehaviour
 {
+    // UI elements assigned from the Unity Editor
     [SerializeField] private Button BackButton;
     [SerializeField] private Button MeniuButton;
     [SerializeField] private Image Meniu;
@@ -13,15 +14,18 @@ public class TalkingPage : MonoBehaviour
     [SerializeField] private Canvas SettingsCanvas;
     [SerializeField] private Button BacktoSessionButton;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Called once when the script is initialized
     [System.Obsolete]
     void Start()
     {
+        // Unload the previous scene if it is loaded
         if (IsSceneLoaded("Pradinis langas"))
         {
             SceneManager.UnloadScene("Pradinis langas");
             Debug.Log("Bendravimo langas loaded");
         }
+
+        // Assign button click listeners to respective methods
         BackButton.onClick.AddListener(OnBackButton);
         MeniuButton.onClick.AddListener(OnMeniuButton);
         SettingsButton.onClick.AddListener(OnSettinsButton);
@@ -29,21 +33,31 @@ public class TalkingPage : MonoBehaviour
         EndSessionButton.onClick.AddListener(OnBackButton);
         BacktoSessionButton.onClick.AddListener(OnBackToSessionButton);
 
+        // Hide the menu and settings canvas initially
         Meniu.gameObject.SetActive(false);
         SettingsCanvas.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Checks if a given scene is currently loaded.
+    /// </summary>
     private bool IsSceneLoaded(string sceneName)
     {
         Scene scene = SceneManager.GetSceneByName(sceneName);
         return scene.isLoaded;
     }
 
+    /// <summary>
+    /// Handles the "Back" button click event.
+    /// Unloads the current scene and navigates back to "Pradinis langas".
+    /// Stores the last talking page in PlayerPrefs.
+    /// </summary>
     [System.Obsolete]
     private void OnBackButton()
     {
         string lastScene = "";
 
+        // Check which scene is currently loaded and unload it
         if (IsSceneLoaded("Bendravimo langas female"))
         {
             lastScene = "Bendravimo langas female";
@@ -55,36 +69,45 @@ public class TalkingPage : MonoBehaviour
             SceneManager.UnloadSceneAsync("Bendravimo langas male");
         }
 
+        // Save the last visited scene before going back
         if (!string.IsNullOrEmpty(lastScene))
         {
             PlayerPrefs.SetString("LastTalkingPage", lastScene);
             PlayerPrefs.Save();
         }
 
+        // Load the starting scene
         LoadScene("Pradinis langas");
         Debug.Log("Pradinis langas loaded");
     }
+
+    /// <summary>
+    /// Toggles the visibility of the menu UI.
+    /// </summary>
     private void OnMeniuButton()
     {
-        //if meniubutton is pressed once the meniu will appear, if pressed again it will disappear
-        bool isActive = !Meniu.gameObject.activeSelf;
-        if (isActive) {
-            Meniu.gameObject.SetActive(isActive);
-        }
-        else
-        {
-            Meniu.gameObject.SetActive(isActive);
-        }
+        // Toggle the menu visibility
+        Meniu.gameObject.SetActive(!Meniu.gameObject.activeSelf);
     }
+
+    /// <summary>
+    /// Shows the settings canvas when the settings button is clicked.
+    /// </summary>
     private void OnSettinsButton()
     {
-       
-            SettingsCanvas.gameObject.SetActive(true);
-       
+        SettingsCanvas.gameObject.SetActive(true);
     }
+
+    /// <summary>
+    /// Handles the avatar change button click.
+    /// Switches between "Bendravimo langas male" and "Bendravimo langas female" scenes.
+    /// Saves the last active scene to PlayerPrefs.
+    /// </summary>
     private void OnAvatarChangeButton()
     {
         string newScene = "";
+
+        // Check the currently loaded scene and switch to the other
         if (IsSceneLoaded("Bendravimo langas male"))
         {
             SceneManager.UnloadSceneAsync("Bendravimo langas male");
@@ -96,6 +119,7 @@ public class TalkingPage : MonoBehaviour
             newScene = "Bendravimo langas male";
         }
 
+        // Save the new scene choice and load it
         if (!string.IsNullOrEmpty(newScene))
         {
             PlayerPrefs.SetString("LastTalkingPage", newScene);
@@ -104,13 +128,19 @@ public class TalkingPage : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Hides the settings canvas when returning to the session.
+    /// </summary>
     private void OnBackToSessionButton()
     {
         SettingsCanvas.gameObject.SetActive(false);
     }
+
+    /// <summary>
+    /// Loads a new scene by name.
+    /// </summary>
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
-
 }
