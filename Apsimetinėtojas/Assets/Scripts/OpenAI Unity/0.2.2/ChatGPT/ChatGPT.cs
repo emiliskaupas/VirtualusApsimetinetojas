@@ -10,6 +10,7 @@ using UnityEngine.Profiling;
 using System.Globalization;
 using System.Collections;
 using UnityEngine.Networking;
+using uLipSync;
 
 namespace OpenAI
 {
@@ -24,7 +25,7 @@ namespace OpenAI
         [SerializeField] private RectTransform sent;
         [SerializeField] private RectTransform received;
         [SerializeField] private TMP_Text received_text;
-
+        [SerializeField] private AudioSource audioSource;
         private float height;
         private string model;
         private OpenAIApi openai;
@@ -177,7 +178,7 @@ namespace OpenAI
                     yield break;
                 }
 
-                AudioSource audioSource = GetComponent<AudioSource>();
+                //AudioSource audioSource = GetComponent<AudioSource>();
                 if (audioSource == null)
                 {
                     Debug.LogError("No AudioSource found on this GameObject.");
