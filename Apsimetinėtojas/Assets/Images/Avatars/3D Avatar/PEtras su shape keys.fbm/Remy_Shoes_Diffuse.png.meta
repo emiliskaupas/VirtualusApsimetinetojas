@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy_Shoes_Diffuse_0: -1858978883730323491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

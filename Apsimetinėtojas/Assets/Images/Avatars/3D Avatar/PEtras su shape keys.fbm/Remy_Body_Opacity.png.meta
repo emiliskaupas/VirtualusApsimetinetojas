@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy_Body_Opacity_0: -6094081667314054005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

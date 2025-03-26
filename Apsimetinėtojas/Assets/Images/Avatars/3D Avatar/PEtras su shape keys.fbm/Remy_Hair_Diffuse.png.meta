@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy_Hair_Diffuse_0: 2287641703059234942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy_Bottom_Gloss_0: -2166988309933501230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

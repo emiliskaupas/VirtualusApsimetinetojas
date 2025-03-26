@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy_Body_Specular_0: -3723759341101161154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

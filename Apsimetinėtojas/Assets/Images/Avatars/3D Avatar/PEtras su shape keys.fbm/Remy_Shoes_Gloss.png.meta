@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy_Shoes_Gloss_0: -8208284582496826934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

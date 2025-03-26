@@ -4,6 +4,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
+using UnityEngine.Rendering;
 
 public class WhisperAPI : MonoBehaviour
 {
@@ -64,6 +65,7 @@ public class WhisperAPI : MonoBehaviour
             {
                 model = "tts-1",
                 input = prompt,
+                speed = "0.9",
                 voice = "nova",
                 response_format = "mp3"
             };

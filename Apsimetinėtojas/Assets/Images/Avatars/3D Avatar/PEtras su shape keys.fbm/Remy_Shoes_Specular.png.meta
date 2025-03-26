@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy_Shoes_Specular_0: 2938979627076367932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
