@@ -11,6 +11,7 @@ using System.Globalization;
 using System.Collections;
 using UnityEngine.Networking;
 using uLipSync;
+using Newtonsoft.Json;
 
 namespace OpenAI
 {
@@ -26,6 +27,7 @@ namespace OpenAI
         [SerializeField] private RectTransform received;
         [SerializeField] private TMP_Text received_text;
         [SerializeField] private AudioSource audioSource;
+        [SerializeField] private Button EndSessionButton;
         private float height;
         private string model;
         private OpenAIApi openai;
@@ -33,6 +35,9 @@ namespace OpenAI
         private AudioRecorder recorder;
         private WhisperAPI whisper;
         private string transcription;
+
+        private SessionEvaluator evaluator;
+        private string sessionFilePath;
 
         private List<ChatMessage> messages = new List<ChatMessage>();
 
@@ -56,6 +61,8 @@ namespace OpenAI
             recordButton.onClick.AddListener(StartRecording);
             stopRecordButton.onClick.AddListener(StopRecordingAndTranscribe);
             button.onClick.AddListener(SendReply);
+            EndSessionButton.onClick.AddListener(EndSession);
+            evaluator = FindObjectOfType<SessionEvaluator>();
 
 
         }
@@ -75,6 +82,30 @@ namespace OpenAI
             recorder.StopRecording();
             transcription = await whisper.TranscribeAudio(recorder.GetFilePath());
             inputField.text = transcription;
+        }
+
+        private void EndSession()
+        {
+            string sessionId = System.Guid.NewGuid().ToString(); // unique ID per session
+            sessionFilePath = Path.Combine(Application.persistentDataPath, $"session_{sessionId}.json");
+
+            var sessionData = new ChatSession
+            {
+                session_id = sessionId,
+                timestamp = System.DateTime.UtcNow.ToString("o"),
+                duration_seconds = Time.timeSinceLevelLoad,
+                messages = messages
+            };
+
+            string json = JsonConvert.SerializeObject(sessionData, Formatting.Indented);
+            File.WriteAllText(sessionFilePath, json);
+            Debug.Log("Session written to: " + sessionFilePath);
+
+            StartCoroutine(RunEvaluation(sessionFilePath));
+        }
+        private IEnumerator RunEvaluation(string path)
+        {
+            yield return evaluator.EvaluateSession(path);
         }
 
         private void AppendMessage(ChatMessage message)
@@ -190,5 +221,13 @@ namespace OpenAI
                 Debug.Log("Playing audio...");
             }
         }
+    }
+    [System.Serializable]
+    public class ChatSession
+    {
+        public string session_id;
+        public string timestamp;
+        public float duration_seconds;
+        public List<ChatMessage> messages;
     }
 }
