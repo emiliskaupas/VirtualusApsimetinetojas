@@ -6563,6 +6563,7 @@ MonoBehaviour:
   received: {fileID: 169318417}
   received_text: {fileID: 1330780154}
   audioSource: {fileID: 1863683209}
+  EndSessionButton: {fileID: 1380910836}
 --- !u!4 &1483043658
 Transform:
   m_ObjectHideFlags: 0
@@ -8884,7 +8885,6 @@ MonoBehaviour:
   Meniu: {fileID: 1062336059}
   SettingsButton: {fileID: 1548766402}
   AvatarChangeButton: {fileID: 619086897}
-  EndSessionButton: {fileID: 1380910836}
   SettingsCanvas: {fileID: 1754463915}
   BacktoSessionButton: {fileID: 1686083177}
 --- !u!4 &1970743593

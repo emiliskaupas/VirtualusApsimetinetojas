@@ -9,7 +9,6 @@ public class TalkingPage : MonoBehaviour
     [SerializeField] private Image Meniu;
     [SerializeField] private Button SettingsButton;
     [SerializeField] private Button AvatarChangeButton;
-    [SerializeField] private Button EndSessionButton;
     [SerializeField] private Canvas SettingsCanvas;
     [SerializeField] private Button BacktoSessionButton;
 
@@ -26,9 +25,7 @@ public class TalkingPage : MonoBehaviour
         MeniuButton.onClick.AddListener(OnMeniuButton);
         SettingsButton.onClick.AddListener(OnSettinsButton);
         AvatarChangeButton.onClick.AddListener(OnAvatarChangeButton);
-        EndSessionButton.onClick.AddListener(OnBackButton);
         BacktoSessionButton.onClick.AddListener(OnBackToSessionButton);
-
         Meniu.gameObject.SetActive(false);
         SettingsCanvas.gameObject.SetActive(false);
     }
