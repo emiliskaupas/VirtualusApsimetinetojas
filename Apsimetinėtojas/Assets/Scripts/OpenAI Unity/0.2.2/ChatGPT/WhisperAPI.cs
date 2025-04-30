@@ -11,6 +11,8 @@ public class WhisperAPI : MonoBehaviour
     private static readonly string whisperUrl = "https://api.openai.com/v1/audio/transcriptions";
     private static readonly string ttsUrl = "https://api.openai.com/v1/audio/speech";
 
+    public string selectedVoice = "nova";
+
     public async Task<string> TranscribeAudio(string filePath)
     {
         if (!File.Exists(filePath))
@@ -66,7 +68,7 @@ public class WhisperAPI : MonoBehaviour
                 model = "tts-1",
                 input = prompt,
                 speed = "0.9",
-                voice = "nova",
+                voice = selectedVoice,
                 response_format = "mp3"
             };
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(requestData);
