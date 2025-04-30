@@ -32,7 +32,7 @@ Atrašyk tokiu formatu ir būtinai tik tokiu formatu::
 4. Pokalbio eiga: x/5
 5. Bendra pokalbio nauda: x/5
 Kur x yra vertinimas kategorijai
-*santrauka iki 5 sakinių*
+santrauka (iki 5 sakiniu)
 ";
 
 
@@ -45,6 +45,7 @@ Kur x yra vertinimas kategorijai
             Debug.LogError("Session file not found: " + sessionFilePath);
             return;
         }
+        TalkingPage talkingPage = FindFirstObjectByType<TalkingPage>();
 
         string sessionData = File.ReadAllText(sessionFilePath);
         string prompt = systemPrompt + "\n\nTranscript:\n" + sessionData;
@@ -74,10 +75,11 @@ Kur x yra vertinimas kategorijai
                 JObject parsed = JObject.Parse(result);
                 string evaluation = parsed["choices"][0]["message"]["content"].ToString();
                 Debug.Log("Evaluation:\n" + evaluation);
-
-                // Optional: Save evaluation to file
+                talkingPage.ShowEvaluation(evaluation);
+                /* Issaugos vertinima i faila:
                 string evalPath = Path.Combine(Path.GetDirectoryName(sessionFilePath), Path.GetFileNameWithoutExtension(sessionFilePath) + "_evaluation.txt");
                 File.WriteAllText(evalPath, evaluation);
+                */
             }
             else
             {

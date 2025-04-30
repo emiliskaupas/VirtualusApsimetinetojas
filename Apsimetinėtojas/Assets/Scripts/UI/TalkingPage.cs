@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +12,11 @@ public class TalkingPage : MonoBehaviour
     [SerializeField] private Button AvatarChangeButton;
     [SerializeField] private Canvas SettingsCanvas;
     [SerializeField] private Button BacktoSessionButton;
-
+    [SerializeField] private Canvas EvaluationCanvas;
+    [SerializeField] private Button EndSessionButton;
+    [SerializeField] private GameObject EvaluationAnswerBox;
+    [SerializeField] private GameObject LoadingScreen;
+    [SerializeField] private Button EvaluationBackButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [System.Obsolete]
     void Start()
@@ -26,14 +31,45 @@ public class TalkingPage : MonoBehaviour
         SettingsButton.onClick.AddListener(OnSettinsButton);
         AvatarChangeButton.onClick.AddListener(OnAvatarChangeButton);
         BacktoSessionButton.onClick.AddListener(OnBackToSessionButton);
+        EndSessionButton.onClick.AddListener(OnEndSessionButton);
+        EvaluationBackButton.onClick.AddListener(OnEvaluationBackButton);
         Meniu.gameObject.SetActive(false);
         SettingsCanvas.gameObject.SetActive(false);
+        EvaluationAnswerBox.gameObject.SetActive(false);
+        EvaluationCanvas.gameObject.SetActive(false);
     }
 
     private bool IsSceneLoaded(string sceneName)
     {
         Scene scene = SceneManager.GetSceneByName(sceneName);
         return scene.isLoaded;
+    }
+    private void OnEndSessionButton()
+    {
+        EvaluationCanvas.gameObject.SetActive(true);
+
+    }
+
+    [System.Obsolete]
+    private void OnEvaluationBackButton()
+    {
+        OnBackButton();
+    }
+    public void ShowEvaluation(string evaluation)
+    {
+        LoadingScreen.gameObject.SetActive(false);
+        EvaluationAnswerBox.gameObject.SetActive(true);
+        TMP_Text textComponent = EvaluationAnswerBox.GetComponentInChildren<TMP_Text>();
+
+        if (textComponent != null)
+        {
+            textComponent.text = evaluation;
+            EvaluationAnswerBox.SetActive(true); // Ensure it's visible
+        }
+        else
+        {
+            Debug.LogError("No TMP_Text component found inside EvaluationAnswerBox!");
+        }
     }
 
     [System.Obsolete]
