@@ -1,0 +1,8 @@
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/arnas/Desktop/Naujas aplankas/VirtualusApsimetinetojas/main 04-30/.utmp/RelWithDebInfo/ee1q6u24/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
