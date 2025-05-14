@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - button
+  - 
   - 
   - 
   - 
@@ -40,15 +40,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: UI
-    uniqueID: 152997465
-    locked: 0
-  - name: UI_Back
-    uniqueID: 2688291749
-    locked: 0
-  - name: Character
-    uniqueID: 1644323899
     locked: 0
   m_RenderingLayers:
   - Default
