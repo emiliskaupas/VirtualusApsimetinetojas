@@ -15,6 +15,7 @@ public class TalkingPage : MonoBehaviour
     [SerializeField] private Canvas SettingsCanvas;
     [SerializeField] private Button BacktoSessionButton;
     [SerializeField] private Canvas EvaluationCanvas;
+    [SerializeField] private GameObject LoadinScreen;
     //[SerializeField] private GameObject EvaluationAnswerBox;
     [SerializeField] private Button EvaluationBackButton;
     //idk ar veiks ar reiks
