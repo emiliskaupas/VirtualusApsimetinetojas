@@ -355,8 +355,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -743}
-  m_SizeDelta: {x: 1080, y: 406.417}
+  m_AnchoredPosition: {x: 0, y: -515.85}
+  m_SizeDelta: {x: 1080, y: 654.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195192347
 MonoBehaviour:
@@ -508,8 +508,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2019548138}
   m_HandleRect: {fileID: 2019548137}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.4323649
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2181,17 +2181,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u200B"
+  m_text: "\u0160i pokalbi\u0173 program\u0117l\u0117 sukurta kaip mokymosi priemon\u0117,
+    padedanti geriau suprasti ir prakti\u0161kai bendrauti su \u017Emon\u0117mis,
+    patirian\u010Diais li\u016Bdesio, pyk\u010Dio, g\u0117dos ar baim\u0117s emocijas.
+    Dirbtinis intelektas imituoja jautri\u0105 emocin\u0119 b\u016Bsen\u0105, skatindamas
+    lavinti empatij\u0105 ir tinkam\u0105 reakcij\u0105 sud\u0117tingose situacijose.
+    D\u0117mesio: k\u016Br\u0117jai n\u0117ra licencijuoti psichikos sveikatos specialistai
+    ir neprisiima atsakomyb\u0117s u\u017E naudotojo veiksmus ar sprendimus."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e8aff59a54e2ffa43a81fad383a4247c, type: 2}
+  m_sharedMaterial: {fileID: -4823408301110046185, guid: e8aff59a54e2ffa43a81fad383a4247c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4292203993
+  m_fontColor: {r: 0.8490566, g: 0.8370417, b: 0.8370417, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2208,8 +2214,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 50
@@ -2246,7 +2252,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: -2.8934326, z: 0.69714355, w: 4.7921143}
+  m_margin: {x: 5, y: 5.103455, z: 0.69714355, w: 4.7921143}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

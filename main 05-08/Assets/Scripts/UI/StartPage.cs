@@ -46,11 +46,13 @@ public class StartPage : MonoBehaviour
         // Set text content when visible
         if (isActive)
         {
-            infoText.text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolor at ea tempora " +
-                "voluptatibus dignissimos nesciunt totam, nostrum beatae sapiente sed recusandae rem voluptates " +
-                "suscipit tenetur est cupiditate sint excepturi?" +
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolor at ea tempora voluptatibus dignissimos " +
-                "nesciunt totam, nostrum beatae sapiente sed recusandae rem voluptates suscipit tenetur est cupiditate sint excepturi?";
+            infoText.text = "Ši pokalbių programėlė sukurta kaip mokymosi priemonė, " +
+                "padedanti geriau suprasti ir praktiškai bendrauti su žmonėmis, " +
+                "patiriančiais liūdesio, pykčio, gėdos ar baimės emocijas. Dirbtinis " +
+                "intelektas imituoja jautrią emocinę būseną, skatindamas lavinti empatiją " +
+                "ir tinkamą reakciją sudėtingose situacijose.\r\nDėmesio: kūrėjai nėra " +
+                "licencijuoti psichikos sveikatos specialistai ir neprisiima atsakomybės " +
+                "už naudotojo veiksmus ar sprendimus.";
 
         }
     }
