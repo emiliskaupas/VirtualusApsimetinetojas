@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using System;
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 
 public class Evaluation
 {
@@ -95,9 +96,14 @@ Gražink tik json atsakymą, nerašyk jokio papildomo teksto.
                 List<int> newList = new List<int>() {evaluationObject.pokalbioEiga, evaluationObject.patarimuNauda, evaluationObject.aktyvusKlausymas, evaluationObject.bendraNauda, evaluationObject.empatijaIrBrandumas};
            
                 graph.ShowGraph(newList);
-                Debug.Log(evaluationObject.summary);
+                string summary = evaluationObject.summary;
+                TextMeshProUGUI summaryText = GameObject.Find("SummaryScrollView")
+                .transform.Find("Viewport/Content/Text (TMP)")
+                .GetComponent<TextMeshProUGUI>();
 
-               // Debug.Log("Evaluation:\n" + evaluation);
+                summaryText.text = summary;
+
+                // Debug.Log("Evaluation:\n" + evaluation);
                 //JObject.Parse(parsed["choices"][0]["message"]["content"]);
                 //talkingPage.ShowEvaluation(evaluation);
                 /* Issaugos vertinima i faila:
