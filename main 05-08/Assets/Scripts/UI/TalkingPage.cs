@@ -15,8 +15,8 @@ public class TalkingPage : MonoBehaviour
     [SerializeField] private Canvas SettingsCanvas;
     [SerializeField] private Button BacktoSessionButton;
     [SerializeField] private Canvas EvaluationCanvas;
-    [SerializeField] private GameObject EvaluationAnswerBox;
-    [SerializeField] private GameObject LoadingScreen;
+    [SerializeField] private GameObject LoadinScreen;
+    //[SerializeField] private GameObject EvaluationAnswerBox;
     [SerializeField] private Button EvaluationBackButton;
     //idk ar veiks ar reiks
     [Header("Text References")]
@@ -60,7 +60,7 @@ public class TalkingPage : MonoBehaviour
         EvaluationBackButton.onClick.AddListener(OnEvaluationBackButton);
         Meniu.gameObject.SetActive(false);
         SettingsCanvas.gameObject.SetActive(false);
-        EvaluationAnswerBox.gameObject.SetActive(false);
+        //EvaluationAnswerBox.gameObject.SetActive(false);
         EvaluationCanvas.gameObject.SetActive(false);
         //prideta eil
         //InitializeUI();
@@ -143,22 +143,6 @@ public class TalkingPage : MonoBehaviour
     }
     //virsuje pridetas metodas
 
-    public void ShowEvaluation(string evaluation)
-    {
-        LoadingScreen.gameObject.SetActive(false);
-        EvaluationAnswerBox.gameObject.SetActive(true);
-        TMP_Text textComponent = EvaluationAnswerBox.GetComponentInChildren<TMP_Text>();
-
-        if (textComponent != null)
-        {
-            textComponent.text = evaluation;
-            EvaluationAnswerBox.SetActive(true); // Ensure it's visible
-        }
-        else
-        {
-            Debug.LogError("No TMP_Text component found inside EvaluationAnswerBox!");
-        }
-    }
 
 
 

@@ -6,12 +6,25 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine.UI;
+using System;
+using NUnit.Framework;
+using System.Collections.Generic;
+using TMPro;
 
+public class Evaluation
+{
+    public int empatijaIrBrandumas;
+    public int aktyvusKlausymas;
+    public int patarimuNauda;
+    public int pokalbioEiga;
+    public int bendraNauda;
+    public string summary;
+}
 public class SessionEvaluator : MonoBehaviour
 {
     [SerializeField] private Button EndSessionButton;
     private static readonly string evaluationEndpoint = "https://api.openai.com/v1/chat/completions";
-    private static readonly string evaluationModel = "gpt-4-1106-preview";  // Or "gpt-4o"
+    private static readonly string evaluationModel = "gpt-4-1106-preview"; 
     private static readonly string systemPrompt = @"Tu esi profesionalus vertintojas, kuris skaito pokalbį tarp vartotojo ir AI asistento, kuris specifiškai ištreniruotas būti kuo emocingesniu. Vartotojas ieško būdų kaip apraminti Dirbtinį intelektą. 
 Tavo darbas yra įvertinti vartotojo pagalbos kokybę pagal šiuos kriterijus:
 
@@ -20,21 +33,21 @@ Tavo darbas yra įvertinti vartotojo pagalbos kokybę pagal šiuos kriterijus:
 3. Patarimų nauda
 4. Pokalbio eiga
 5. Bendra pokalbio nauda
+6. Apibendrinamas
 
-Atsakyme aprašyk:
-- Rezultatą, įvertintą nuo 1 iki 4 kiekvienam kriterijui.
-- Apibendrinimą.
-Visas pokalbis turi vykti lietuviškai ir tavo atsakymas turi būti lietuviškas. Visiškai ignoruok patį pirmą vartotojo teiginį, kadangi jis skirtas tik duoti dirbtiniui intelektui bendrą suvokimą apie situaciją.
-Atrašyk tokiu formatu ir būtinai tik tokiu formatu::
-1. Empatija ir emocinis brandumas: x/5
-2. Aktyvus klausymas: x/5
-3. Patarimų nauda: x/5
-4. Pokalbio eiga: x/5
-5. Bendra pokalbio nauda: x/5
-Kur x yra vertinimas kategorijai
-santrauka (iki 5 sakiniu)
+Atsakymą pateik JSON teksto failu (nerašyk ```json ```, tiesiog Json teksto tipą), kuris atitiktų šį pavyzdį, nerašyk jokio papildomo teksto. Įvertinimai, kurie nėra ""summary"" yra integer tipo ir yra intervale nuo 1 iki 5
+Norimas json formatas:
+
+{
+  ""empatijaIrBrandumas"":1,
+  ""aktyvusKlausymas"": 5,
+  ""patarimuNauda"":2,
+  ""pokalbioEiga"":4,
+  ""bendraNauda"":4,
+  ""summary"": ""Pokalbio fragmente, kurį reikia įvertinti, vartotojas neteikia jokios pagalbos ar atsako asmeniškai, tad negalima įvertinti nei atsako kokybės, nei to, kaip vartotojas supranta AI emocionalumą. Vienintelis vartotojo įrašas yra AI programos aprašymas ir lietuviškas \""labas\"", kuris neužtikrina jokios pagalbos. Asistento atsakymas rodo per didelę emocinę reakciją į trumpą vartotojo pasisveikinimą, tačiau vartotojo įnašo į šį pokalbį vertinimas yra minimalus.""
+}
+Gražink tik json atsakymą, nerašyk jokio papildomo teksto.
 ";
-
 
 
 
@@ -63,19 +76,36 @@ santrauka (iki 5 sakiniu)
         var json = JsonConvert.SerializeObject(requestBody);
         using (HttpClient client = new HttpClient())
         {
-            string apiKey = ConfigLoader.config.api_key;  // <- Add this in your new or extended config
+            string apiKey = ConfigLoader.config.api_key;
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", apiKey);
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await client.PostAsync(evaluationEndpoint, content);
             string result = await response.Content.ReadAsStringAsync();
+            Debug.Log("REACHED!");
 
             if (response.IsSuccessStatusCode)
             {
                 JObject parsed = JObject.Parse(result);
                 string evaluation = parsed["choices"][0]["message"]["content"].ToString();
-                Debug.Log("Evaluation:\n" + evaluation);
-                talkingPage.ShowEvaluation(evaluation);
+                Evaluation evaluationObject = JsonConvert.DeserializeObject<Evaluation>(evaluation);
+                Debug.Log("Looking for graph object!");
+                Window_Graph graph = FindObjectOfType<Window_Graph>();
+                Debug.Log("FOUND GRAPH OBJECT!");
+
+                List<int> newList = new List<int>() {evaluationObject.pokalbioEiga, evaluationObject.patarimuNauda, evaluationObject.aktyvusKlausymas, evaluationObject.bendraNauda, evaluationObject.empatijaIrBrandumas};
+           
+                graph.ShowGraph(newList);
+                string summary = evaluationObject.summary;
+                TextMeshProUGUI summaryText = GameObject.Find("SummaryScrollView")
+                .transform.Find("Viewport/Content/Text (TMP)")
+                .GetComponent<TextMeshProUGUI>();
+
+                summaryText.text = summary;
+
+                // Debug.Log("Evaluation:\n" + evaluation);
+                //JObject.Parse(parsed["choices"][0]["message"]["content"]);
+                //talkingPage.ShowEvaluation(evaluation);
                 /* Issaugos vertinima i faila:
                 string evalPath = Path.Combine(Path.GetDirectoryName(sessionFilePath), Path.GetFileNameWithoutExtension(sessionFilePath) + "_evaluation.txt");
                 File.WriteAllText(evalPath, evaluation);
