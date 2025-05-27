@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: ef01d94cfe8d2c941807540a1e844fcd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3855089595630029946
+    second: "Virtualus Apsimetin\u0117tojas_0"
+  - first:
+      213: 9197965256642445175
+    second: "Virtualus Apsimetin\u0117tojas_1"
+  - first:
+      213: 944523024784436194
+    second: "Virtualus Apsimetin\u0117tojas_2"
+  - first:
+      213: 426323135883568899
+    second: "Virtualus Apsimetin\u0117tojas_3"
+  - first:
+      213: -8724638375313223110
+    second: "Virtualus Apsimetin\u0117tojas_4"
+  - first:
+      213: -4470413048217059330
+    second: "Virtualus Apsimetin\u0117tojas_5"
+  - first:
+      213: -2235836332532053079
+    second: "Virtualus Apsimetin\u0117tojas_6"
+  - first:
+      213: -12197914374573598
+    second: "Virtualus Apsimetin\u0117tojas_7"
+  - first:
+      213: 3725801462548423183
+    second: "Virtualus Apsimetin\u0117tojas_8"
+  - first:
+      213: 202720448215076690
+    second: "Virtualus Apsimetin\u0117tojas_9"
+  - first:
+      213: 5800397355702728469
+    second: "Virtualus Apsimetin\u0117tojas_10"
+  - first:
+      213: 1974731939098247657
+    second: "Virtualus Apsimetin\u0117tojas_11"
+  - first:
+      213: 1704347878214727847
+    second: "Virtualus Apsimetin\u0117tojas_12"
+  - first:
+      213: 1083285232091003166
+    second: "Virtualus Apsimetin\u0117tojas_13"
+  - first:
+      213: -9221162978597386084
+    second: "Virtualus Apsimetin\u0117tojas_14"
+  - first:
+      213: 3646267150236164154
+    second: "Virtualus Apsimetin\u0117tojas_15"
+  - first:
+      213: -7661712650896429219
+    second: "Virtualus Apsimetin\u0117tojas_16"
+  - first:
+      213: 1323086987060038091
+    second: "Virtualus Apsimetin\u0117tojas_17"
+  - first:
+      213: -797614526036517698
+    second: "Virtualus Apsimetin\u0117tojas_18"
+  - first:
+      213: 341406791836052849
+    second: "Virtualus Apsimetin\u0117tojas_19"
+  - first:
+      213: 1042773936067847604
+    second: "Virtualus Apsimetin\u0117tojas_20"
+  - first:
+      213: 164593949929359201
+    second: "Virtualus Apsimetin\u0117tojas_21"
+  - first:
+      213: -853531516725458844
+    second: "Virtualus Apsimetin\u0117tojas_22"
+  - first:
+      213: 4119198408423510422
+    second: "Virtualus Apsimetin\u0117tojas_23"
+  - first:
+      213: 365701824436925798
+    second: "Virtualus Apsimetin\u0117tojas_24"
+  - first:
+      213: 1750350872855493123
+    second: "Virtualus Apsimetin\u0117tojas_25"
+  - first:
+      213: 4277434196309754658
+    second: "Virtualus Apsimetin\u0117tojas_26"
+  - first:
+      213: -4030714489850678187
+    second: "Virtualus Apsimetin\u0117tojas_27"
+  - first:
+      213: 1224956016947020351
+    second: "Virtualus Apsimetin\u0117tojas_28"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 347
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 683fa2b1078ff7ac0800000000000000
+      internalID: -3855089595630029946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_1"
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 81
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77fbe820bacb5af70800000000000000
+      internalID: 9197965256642445175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_2"
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 57
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb247ecfae9b1d00800000000000000
+      internalID: 944523024784436194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_3"
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 57
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307eed122aa9ae500800000000000000
+      internalID: 426323135883568899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_4"
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 56
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32d6bd6f9bdbe680800000000000000
+      internalID: -8724638375313223110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_5"
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 56
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff30c59407e5f1c0800000000000000
+      internalID: -4470413048217059330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_6"
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 56
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abc38793b6b8f0e0800000000000000
+      internalID: -2235836332532053079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_7"
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 57
+        width: 9
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1f3bebf0aa4dff0800000000000000
+      internalID: -12197914374573598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_8"
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 56
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0264d6a0b4b4b330800000000000000
+      internalID: 3725801462548423183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_9"
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 56
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f41907c2530d200800000000000000
+      internalID: 202720448215076690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_10"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517b6c6c9a62f7050800000000000000
+      internalID: 5800397355702728469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_11"
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1c19c6c38a76b10800000000000000
+      internalID: 1974731939098247657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_12"
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 8
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8fdae7d5f07a710800000000000000
+      internalID: 1704347878214727847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_13"
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 33
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19f539dd2a980f00800000000000000
+      internalID: 1083285232091003166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_14"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 9
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9848b47029d70080800000000000000
+      internalID: -9221162978597386084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_15"
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 9
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30a00687a42a9230800000000000000
+      internalID: 3646267150236164154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_16"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5fa33000f02ca590800000000000000
+      internalID: -7661712650896429219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_17"
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 8
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9c7aeca9c8c5210800000000000000
+      internalID: 1323086987060038091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_18"
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 33
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebcd6e380dd4ee4f0800000000000000
+      internalID: -797614526036517698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_19"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 9
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d2b471babecb400800000000000000
+      internalID: 341406791836052849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_20"
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 9
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b52c58be5da87e00800000000000000
+      internalID: 1042773936067847604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_21"
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 8
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167c7bd4351c84200800000000000000
+      internalID: 164593949929359201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_22"
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 33
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4688af49b95a724f0800000000000000
+      internalID: -853531516725458844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_23"
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 8
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6911075c0255a2930800000000000000
+      internalID: 4119198408423510422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_24"
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 8
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665764b2fdb331500800000000000000
+      internalID: 365701824436925798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_25"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 0
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ab8d858de7a4810800000000000000
+      internalID: 1750350872855493123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_26"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 33
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223c62d1dbf7c5b30800000000000000
+      internalID: 4277434196309754658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_27"
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 8
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5543e61f6860018c0800000000000000
+      internalID: -4030714489850678187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Virtualus Apsimetin\u0117tojas_28"
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 8
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32ca9fd10beff010800000000000000
+      internalID: 1224956016947020351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ebb4f1996a816544ea3b9142c4f4030d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Virtualus Apsimetin\u0117tojas_0": -3855089595630029946
+      "Virtualus Apsimetin\u0117tojas_1": 9197965256642445175
+      "Virtualus Apsimetin\u0117tojas_10": 5800397355702728469
+      "Virtualus Apsimetin\u0117tojas_11": 1974731939098247657
+      "Virtualus Apsimetin\u0117tojas_12": 1704347878214727847
+      "Virtualus Apsimetin\u0117tojas_13": 1083285232091003166
+      "Virtualus Apsimetin\u0117tojas_14": -9221162978597386084
+      "Virtualus Apsimetin\u0117tojas_15": 3646267150236164154
+      "Virtualus Apsimetin\u0117tojas_16": -7661712650896429219
+      "Virtualus Apsimetin\u0117tojas_17": 1323086987060038091
+      "Virtualus Apsimetin\u0117tojas_18": -797614526036517698
+      "Virtualus Apsimetin\u0117tojas_19": 341406791836052849
+      "Virtualus Apsimetin\u0117tojas_2": 944523024784436194
+      "Virtualus Apsimetin\u0117tojas_20": 1042773936067847604
+      "Virtualus Apsimetin\u0117tojas_21": 164593949929359201
+      "Virtualus Apsimetin\u0117tojas_22": -853531516725458844
+      "Virtualus Apsimetin\u0117tojas_23": 4119198408423510422
+      "Virtualus Apsimetin\u0117tojas_24": 365701824436925798
+      "Virtualus Apsimetin\u0117tojas_25": 1750350872855493123
+      "Virtualus Apsimetin\u0117tojas_26": 4277434196309754658
+      "Virtualus Apsimetin\u0117tojas_27": -4030714489850678187
+      "Virtualus Apsimetin\u0117tojas_28": 1224956016947020351
+      "Virtualus Apsimetin\u0117tojas_3": 426323135883568899
+      "Virtualus Apsimetin\u0117tojas_4": -8724638375313223110
+      "Virtualus Apsimetin\u0117tojas_5": -4470413048217059330
+      "Virtualus Apsimetin\u0117tojas_6": -2235836332532053079
+      "Virtualus Apsimetin\u0117tojas_7": -12197914374573598
+      "Virtualus Apsimetin\u0117tojas_8": 3725801462548423183
+      "Virtualus Apsimetin\u0117tojas_9": 202720448215076690
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

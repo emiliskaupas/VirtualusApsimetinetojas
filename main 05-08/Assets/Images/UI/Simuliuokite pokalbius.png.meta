@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: c4dc0ab27bd307941b9e9e1185250cca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6572349806673299187
+    second: Simuliuokite pokalbius_0
+  - first:
+      213: -7365582890014189974
+    second: Simuliuokite pokalbius_1
+  - first:
+      213: 2522543341887095240
+    second: Simuliuokite pokalbius_2
+  - first:
+      213: -7595404081712489194
+    second: Simuliuokite pokalbius_3
+  - first:
+      213: 5804498247449987238
+    second: Simuliuokite pokalbius_4
+  - first:
+      213: 6746597596111815615
+    second: Simuliuokite pokalbius_5
+  - first:
+      213: 3139940256794850495
+    second: Simuliuokite pokalbius_6
+  - first:
+      213: -1685521251376781592
+    second: Simuliuokite pokalbius_7
+  - first:
+      213: 2356039138222689122
+    second: Simuliuokite pokalbius_8
+  - first:
+      213: -4328847555318088356
+    second: Simuliuokite pokalbius_9
+  - first:
+      213: 4186372693813255131
+    second: Simuliuokite pokalbius_10
+  - first:
+      213: -2848729124979267656
+    second: Simuliuokite pokalbius_11
+  - first:
+      213: 2621882136950545228
+    second: Simuliuokite pokalbius_12
+  - first:
+      213: 1119685106318165474
+    second: Simuliuokite pokalbius_13
+  - first:
+      213: -4262384536934940555
+    second: Simuliuokite pokalbius_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 258
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 258
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0971a13ca25ac4a0800000000000000
+      internalID: -6572349806673299187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a665205d26138c990800000000000000
+      internalID: -7365582890014189974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c105bfedcfd10320800000000000000
+      internalID: 2522543341887095240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 4
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d99f7da34b79690800000000000000
+      internalID: -7595404081712489194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 4
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a842aa0768bd8050800000000000000
+      internalID: 5804498247449987238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 5
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3cfb6c4cab0ad50800000000000000
+      internalID: 6746597596111815615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_6
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 4
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb4b436070f439b20800000000000000
+      internalID: 3139940256794850495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_7
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 4
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6a0562a53db98e0800000000000000
+      internalID: -1685521251376781592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b4ea60d1552b020800000000000000
+      internalID: 2356039138222689122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 4
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d727a6518dce3c0800000000000000
+      internalID: -4328847555318088356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_10
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 5
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb5220e8cbf81a30800000000000000
+      internalID: 4186372693813255131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_11
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 4
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b72d4c34f74778d0800000000000000
+      internalID: -2848729124979267656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_12
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 4
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b11e789ebc26420800000000000000
+      internalID: 2621882136950545228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_13
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5c36efbabe98f00800000000000000
+      internalID: 1119685106318165474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simuliuokite pokalbius_14
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 4
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57000e3c8d7f8d4c0800000000000000
+      internalID: -4262384536934940555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cefdf26c86b7b60469d8f1180db5802c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Simuliuokite pokalbius_0: -6572349806673299187
+      Simuliuokite pokalbius_1: -7365582890014189974
+      Simuliuokite pokalbius_10: 4186372693813255131
+      Simuliuokite pokalbius_11: -2848729124979267656
+      Simuliuokite pokalbius_12: 2621882136950545228
+      Simuliuokite pokalbius_13: 1119685106318165474
+      Simuliuokite pokalbius_14: -4262384536934940555
+      Simuliuokite pokalbius_2: 2522543341887095240
+      Simuliuokite pokalbius_3: -7595404081712489194
+      Simuliuokite pokalbius_4: 5804498247449987238
+      Simuliuokite pokalbius_5: 6746597596111815615
+      Simuliuokite pokalbius_6: 3139940256794850495
+      Simuliuokite pokalbius_7: -1685521251376781592
+      Simuliuokite pokalbius_8: 2356039138222689122
+      Simuliuokite pokalbius_9: -4328847555318088356
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
