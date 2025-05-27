@@ -9373,7 +9373,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackButton: {fileID: 658394857}
   MeniuButton: {fileID: 48371419}
-  Meniu: {fileID: 1062336059}
   SettingsButton: {fileID: 1548766402}
   AvatarChangeButton: {fileID: 619086897}
   EndSessionButton: {fileID: 369572847}
@@ -9786,15 +9785,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f723e7a9a5ace524693c743afccaf149, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.08715578
+      value: -0.017382821
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f723e7a9a5ace524693c743afccaf149, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f723e7a9a5ace524693c743afccaf149, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9961947
+      value: 0.99984896
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f723e7a9a5ace524693c743afccaf149, type: 3}
       propertyPath: m_LocalRotation.z
@@ -9806,7 +9805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f723e7a9a5ace524693c743afccaf149, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 190
+      value: 181.992
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f723e7a9a5ace524693c743afccaf149, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

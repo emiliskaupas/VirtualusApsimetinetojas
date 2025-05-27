@@ -3,19 +3,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class TalkingPage : MonoBehaviour
 {
     [SerializeField] private Button BackButton;
     [SerializeField] private Button MeniuButton;
-    [SerializeField] private Image Meniu;
     [SerializeField] private Button SettingsButton;
     [SerializeField] private Button AvatarChangeButton;
     [SerializeField] private Button EndSessionButton;
     [SerializeField] private Canvas SettingsCanvas;
     [SerializeField] private Button BacktoSessionButton;
     [SerializeField] private Canvas EvaluationCanvas;
-    [SerializeField] private GameObject LoadinScreen;
+    //[SerializeField] private GameObject LoadinScreen;
     //[SerializeField] private GameObject EvaluationAnswerBox;
     [SerializeField] private Button EvaluationBackButton;
     //idk ar veiks ar reiks
@@ -27,7 +27,7 @@ public class TalkingPage : MonoBehaviour
 
 
     public static float DefaultAnswerSize = 20f;
-    public static float DefaultInputSize = 16f;
+    public static float DefaultInputSize = 15f;
     public static float DefaultPlaceholderSize = 14f;
 
 
@@ -58,7 +58,6 @@ public class TalkingPage : MonoBehaviour
         BacktoSessionButton.onClick.AddListener(OnBackToSessionButton);
         EndSessionButton.onClick.AddListener(OnEndSessionButton);
         EvaluationBackButton.onClick.AddListener(OnEvaluationBackButton);
-        Meniu.gameObject.SetActive(false);
         SettingsCanvas.gameObject.SetActive(false);
         //EvaluationAnswerBox.gameObject.SetActive(false);
         EvaluationCanvas.gameObject.SetActive(false);
@@ -67,7 +66,6 @@ public class TalkingPage : MonoBehaviour
         InitializeTextSizes();
 
 
-        Meniu.gameObject.SetActive(false);
         SettingsCanvas.gameObject.SetActive(false);
     }
 
@@ -179,15 +177,7 @@ public class TalkingPage : MonoBehaviour
     }
     private void OnMeniuButton()
     {
-        //if meniubutton is pressed once the meniu will appear, if pressed again it will disappear
-        bool isActive = !Meniu.gameObject.activeSelf;
-        if (isActive) {
-            Meniu.gameObject.SetActive(isActive);
-        }
-        else
-        {
-            Meniu.gameObject.SetActive(isActive);
-        }
+        Debug.Log("unimolemented");
     }
     private void OnSettinsButton()
     {

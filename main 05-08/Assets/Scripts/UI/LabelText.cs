@@ -10,9 +10,9 @@ public class LabelText : MonoBehaviour
     public static float currentFontSizeMultiplier = 1f;
 
     //pridetas sudas
-    private float answerBaseSize = 20f;
-    private float inputBaseSize = 16f;
-    private float otherBaseSize = 14f;
+    [SerializeField] private float answerBaseSize = 20f;
+    [SerializeField] private float inputBaseSize = 16f;
+    [SerializeField] private float otherBaseSize = 14f;
 
     private void Start()
     {
