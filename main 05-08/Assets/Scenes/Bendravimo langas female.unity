@@ -6897,8 +6897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019bb3476da0447478fc92523894f6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BackButton: {fileID: 507968213}
-  MeniuButton: {fileID: 1723934872}
+  BackButton: {fileID: 1723934872}
+  MeniuButton: {fileID: 507968213}
   SettingsButton: {fileID: 1801167424}
   AvatarChangeButton: {fileID: 5440140}
   EndSessionButton: {fileID: 622901957}
