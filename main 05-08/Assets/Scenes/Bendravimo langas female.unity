@@ -1623,6 +1623,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5868663097191699087, guid: 78da750c266e96347a8c804b73ace9ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1401820100}
     - targetCorrespondingSourceObject: {fileID: 4536195098298800188, guid: 78da750c266e96347a8c804b73ace9ee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1708639066}
@@ -4025,6 +4028,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4310127261302448542, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310127261302448542, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0.5
       objectReference: {fileID: 0}
@@ -4062,7 +4069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4816553916208893552, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
       propertyPath: m_PlaneDistance
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4816553916208893552, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
       propertyPath: m_SortingLayerID
@@ -4079,6 +4086,10 @@ PrefabInstance:
     - target: {fileID: 4957752316447571033, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957752316447571033, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 5928743009713916382, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4187,6 +4198,10 @@ PrefabInstance:
     - target: {fileID: 8402126502317549633, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402126502317549633, guid: 93331fdfb161a994a906ad2d859e345f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: NaN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4939,6 +4954,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!1 &1401820095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5868663097191699087, guid: 78da750c266e96347a8c804b73ace9ee, type: 3}
+  m_PrefabInstance: {fileID: 622901956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1401820100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401820095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4cbc4ab91517147814873a1e7764dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelToMove: {fileID: 1708639064}
 --- !u!1 &1461181574
 GameObject:
   m_ObjectHideFlags: 0
