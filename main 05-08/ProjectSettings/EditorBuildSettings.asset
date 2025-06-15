@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Bendravimo langas male.unity
     guid: 57fb6edb41b9db3448d0e3ae66e2237c
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 69e76bcb5dcaf1946b35645a8623edb3, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a8c9985cfadb2634da8d39060b05be32, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 7ec635b788d6502428ae523d80a0c5f1, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -1,1 +1,0 @@
-C:\Users\PC\Desktop\VirtualusApsimetinetojas\main 05-08\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\z642v5r1\obj\arm64-v8a
